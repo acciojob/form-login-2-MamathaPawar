@@ -8,7 +8,33 @@
 
 <body>
 	<!-- the entire body must be written by student -->
+<form>
+		<label for="first-name">First Name:</label>
+		<input type="text" id="first-name" name="First Name" required><br><br>
+		
+		<label for="last-name">Last Name:</label>
+		<input type="text" id="last-name" name="Last Name" required><br><br>
+		
+		<label for="phone-number">Phone Number:</label>
+		<input type="tel" id="phone-number" name="Phone Number" required><br><br>
+		
+		<label for="email-id">Email ID:</label>
+		<input type="email" id="email-id" name="Email ID" required><br><br>
+		
+		<input type="submit" value="Submit" onclick="submitForm()">
+	</form>
+
+
+	
     <script type="text/javascript" src="./script.js">
+		function submitForm() {
+			var firstName = document.getElementById("first-name").value;
+			var lastName = document.getElementById("last-name").value;
+			var phoneNumber = document.getElementById("phone-number").value;
+			var emailID = document.getElementById("email-id").value;
+
+			alert("First Name: " + firstName + "\nLast Name: " + lastName + "\nPhone Number: " + phoneNumber + "\nEmail ID: " + emailID);
+		}
 </script>
 
 </body>
